@@ -5,3 +5,9 @@ let age = 18;
 
 console.log(name);
 console.log(age);
+const button = document.getElementById("myButton");
+
+button.addEventListener("click", function () {
+  alert("You clicked the button!");
+});
+
