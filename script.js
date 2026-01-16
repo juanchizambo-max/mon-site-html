@@ -1,4 +1,4 @@
-alert("Hello this website is useless but you can click on close and then on (click here)!");
+alert("Hello this website is useless but you can click on close and then on (click here please) and (click me)");
 
 let name = "Juan";
 let age = 18;
