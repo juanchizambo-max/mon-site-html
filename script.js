@@ -8,6 +8,6 @@ console.log(age);
 const button = document.getElementById("myButton");
 
 button.addEventListener("click", function () {
-  alert("You clicked the button!");
+  alert("thanks for helping us test the website,have a nice day!");
 });
 
