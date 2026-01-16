@@ -10,4 +10,8 @@ const button = document.getElementById("myButton");
 button.addEventListener("click", function () {
   alert("thanks for helping us test the website,have a nice day!");
 });
+const title = document.querySelector("h1");
+title.style.color = "green";
+title.textContent = "JavaScript is working!";
+
 
