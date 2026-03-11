@@ -6,3 +6,34 @@
 h1, h2, h3 {
   color: blue;
 }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8dc63f;
+  padding: 15px 30px;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  background-color: #1b5e20;
+}
