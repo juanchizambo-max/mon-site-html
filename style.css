@@ -10,7 +10,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #8dc63f;
+  background-color: blue;
   padding: 15px 30px;
 }
 
