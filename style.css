@@ -37,3 +37,13 @@ h1, h2, h3 {
 .nav-links a:hover {
   background-color: #1b5e20;
 }
+.navbar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+body{
+  padding-top: 70px;
+}
