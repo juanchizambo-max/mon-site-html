@@ -1,14 +1,13 @@
 alert("Welcome to NiceGames")
 
 let name = "Juan";
-let age = 18;
+let age = 3;
 
 console.log(name);
 console.log(age);
 const button = document.getElementById("myButton");
 
-button.addEventListener("click", function () {
-  alert("thanks for helping us test the website,have a nice day!");
+button.addEventListener("click", function (
 });
 const title = document.querySelector("h1");
 title.style.color = "green";
