@@ -18,13 +18,27 @@
     <li><a href="#tycoons">Tycoons</a></li>
     <li><a href="#Fights">Fights</a></li>
     <li><a href="#.io games">.io games</a></li>
-    <li><a href="#Multiplayer games">Cars n' such</a></li>
+	<li><a href="#.io games">.io games</a></li>
+	
   </ul
 	  </nav>
+   <h2>Jeu du nombre magique</h2>
+
+<button onclick="jouer()">Jouer</button>
+<p id="resultat"></p>
+
+<script>
+function jouer() {
+  let nombre = Math.floor(Math.random() * 10) + 1;
+  document.getElementById("resultat").textContent =
+  "Le nombre est : " + nombre;
+}
+  </script>
 
 
 </body>
 </html>
+
 
 
 
