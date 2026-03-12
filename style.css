@@ -41,6 +41,7 @@ h1, h2, h3 {
   position: fixed;
   top: 0;
   width: 98%;
+  backgroud: #222
   z-index: 1000;
 }
 
