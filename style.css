@@ -44,3 +44,31 @@ background:#444;
 body{
   padding-top: 70px;
 }
+.hamburger{
+display:none;
+font-size:28px;
+color:white;
+cursor:pointer;
+}
+
+@media (max-width:768px){
+
+.nav-links{
+display:none;
+flex-direction:column;
+background:#111;
+position:absolute;
+top:60px;
+right:0;
+width:200px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.hamburger{
+display:block;
+}
+
+}
