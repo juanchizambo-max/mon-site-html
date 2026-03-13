@@ -1,3 +1,17 @@
+.game-grid{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.game-card{
+background:#222;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.5);
+width:300px;
+}
 canvas{
 background:#3742fa;
 border:2px solid white;
