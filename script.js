@@ -2,18 +2,22 @@
 
 window.onload = function(){
 
+/* MENU */
 function toggleMenu(){
 document.querySelector(".nav-links").classList.toggle("active");
 }
 window.toggleMenu = toggleMenu;
 
+/* RANDOM NUMBER */
 window.jouer = function(){
 let nombre = Math.floor(Math.random()*10)+1;
 document.getElementById("resultat").textContent =
 "Le nombre est : " + nombre;
 }
 
-/* PONG */
+/* ------------------ */
+/* PONG GAME */
+/* ------------------ */
 
 let pongGame;
 
@@ -31,12 +35,10 @@ let ballDY = 4;
 let paddleY = 150;
 const paddleHeight = 80;
 
-canvas.addEventListener("mousemove", movePaddle);
-
-function movePaddle(e){
+canvas.addEventListener("mousemove", function(e){
 const rect = canvas.getBoundingClientRect();
 paddleY = e.clientY - rect.top - paddleHeight/2;
-}
+});
 
 function draw(){
 
@@ -55,14 +57,17 @@ ctx.fillRect(10,paddleY,10,paddleHeight);
 ballX += ballDX;
 ballY += ballDY;
 
+/* rebond haut bas */
 if(ballY < 0 || ballY > canvas.height){
 ballDY = -ballDY;
 }
 
+/* rebond raquette */
 if(ballX < 20 && ballY > paddleY && ballY < paddleY+paddleHeight){
 ballDX = -ballDX;
 }
 
+/* mur droite */
 if(ballX > canvas.width){
 ballDX = -ballDX;
 }
@@ -73,7 +78,9 @@ pongGame = setInterval(draw,20);
 
 }
 
-/* SNAKE */
+/* ------------------ */
+/* SNAKE GAME */
+/* ------------------ */
 
 let snakeGame;
 
@@ -86,14 +93,14 @@ let snake = [{x:200,y:200}];
 let dx = 20;
 let dy = 0;
 
-document.addEventListener("keydown", changeDirection);
+document.addEventListener("keydown", function(e){
 
-function changeDirection(e){
 if(e.key === "ArrowUp"){dx=0;dy=-20;}
 if(e.key === "ArrowDown"){dx=0;dy=20;}
 if(e.key === "ArrowLeft"){dx=-20;dy=0;}
 if(e.key === "ArrowRight"){dx=20;dy=0;}
-}
+
+});
 
 function drawGame(){
 
