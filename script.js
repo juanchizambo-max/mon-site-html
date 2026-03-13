@@ -18,14 +18,14 @@ document.getElementById("resultat").textContent =
 /* ------------------ */
 /* PONG GAME */
 /* ------------------ */
-canvas.requestFullscreen();
+
 let pongGame;
 
 window.startPong = function(){
 
 const canvas = document.getElementById("pongCanvas");
 const ctx = canvas.getContext("2d");
-
+canvas.requestFullscreen();
 let ballX = canvas.width/2;
 let ballY = canvas.height/2;
 
