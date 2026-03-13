@@ -3,8 +3,8 @@
   font-weight: bold;
 }
 
-h1, {
-  color: blue;
+h1{
+color: blue;
 }
 .navbar{
 display:flex;
