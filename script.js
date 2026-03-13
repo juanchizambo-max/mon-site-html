@@ -18,7 +18,7 @@ document.getElementById("resultat").textContent =
 /* ------------------ */
 /* PONG GAME */
 /* ------------------ */
-
+canvas.requestFullscreen();
 let pongGame;
 
 window.startPong = function(){
