@@ -5,7 +5,6 @@ window.onload = function(){
 function toggleMenu(){
 document.querySelector(".nav-links").classList.toggle("active");
 }
-
 window.toggleMenu = toggleMenu;
 
 window.jouer = function(){
@@ -13,6 +12,14 @@ let nombre = Math.floor(Math.random()*10)+1;
 document.getElementById("resultat").textContent =
 "Le nombre est : " + nombre;
 }
+
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+let x = 250;
+let y = 150;
+let dx = 3;
+let dy = 3;
 
 let game;
 
@@ -34,11 +41,5 @@ y+=dy;
 if(x<0 || x>490) dx=-dx;
 if(y<0 || y>290) dy=-dy;
 }
-}
-const canvas = document.getElementById("game");
-const ctx = canvas.getContext("2d");
 
-let x = 250;
-let y = 150;
-let dx = 3;
-let dy = 3;
+}
