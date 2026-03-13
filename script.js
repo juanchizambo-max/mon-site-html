@@ -82,4 +82,64 @@ ctx.fillRect(part.x,part.y,20,20);
 snakeGame = setInterval(drawGame,100);
 
 }
+  let pongGame;
+
+function startPong(){
+
+const canvas = document.getElementById("pongCanvas");
+const ctx = canvas.getContext("2d");
+
+let ballX = canvas.width/2;
+let ballY = canvas.height/2;
+
+let ballDX = 4;
+let ballDY = 4;
+
+let paddleY = 150;
+const paddleHeight = 80;
+
+canvas.addEventListener("mousemove", movePaddle);
+
+function movePaddle(e){
+const rect = canvas.getBoundingClientRect();
+paddleY = e.clientY - rect.top - paddleHeight/2;
+}
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="white";
+
+/* balle */
+ctx.beginPath();
+ctx.arc(ballX,ballY,8,0,Math.PI*2);
+ctx.fill();
+
+/* raquette */
+ctx.fillRect(10,paddleY,10,paddleHeight);
+
+ballX += ballDX;
+ballY += ballDY;
+
+/* rebond haut bas */
+if(ballY < 0 || ballY > canvas.height){
+ballDY = -ballDY;
+}
+
+/* rebond raquette */
+if(ballX < 20 && ballY > paddleY && ballY < paddleY+paddleHeight){
+ballDX = -ballDX;
+}
+
+/* rebond mur droite */
+if(ballX > canvas.width){
+ballDX = -ballDX;
+}
+
+}
+
+pongGame = setInterval(draw,20);
+
+}
 }
