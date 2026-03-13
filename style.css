@@ -1,12 +1,10 @@
 canvas{
-background:black;
+background:#3742fa;
+border:2px solid white;
 display:block;
 margin-top:10px;
 }
-canvas{
-background: #3742fa;
-border:2px solid white;
-}
+
 .important {
   color: red;
   font-weight: bold;
