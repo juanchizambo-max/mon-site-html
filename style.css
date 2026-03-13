@@ -1,5 +1,5 @@
 canvas{
-background:black;
+background: #3742fa;
 border:2px solid white;
 }
 .important {
@@ -14,7 +14,7 @@ color: #3742fa;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background: noir;
+background: black;
 padding:15px 30px;
 position:fixed;
 top:0;
@@ -42,7 +42,7 @@ border-radius:6px;
 }
 
 .nav-links a:hover{
-background: noir;
+background: black;
 } 
 
 body{
