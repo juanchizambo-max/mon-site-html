@@ -41,5 +41,8 @@ y+=dy;
 if(x<0 || x>490) dx=-dx;
 if(y<0 || y>290) dy=-dy;
 }
+  function startSnake(){
+alert("Snake arrivera bientôt 🐍");
+}
 
 }
