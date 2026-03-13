@@ -25,7 +25,9 @@ window.startPong = function(){
 
 const canvas = document.getElementById("pongCanvas");
 const ctx = canvas.getContext("2d");
+
 canvas.requestFullscreen();
+
 let ballX = canvas.width/2;
 let ballY = canvas.height/2;
 
@@ -33,12 +35,17 @@ let ballDX = 4;
 let ballDY = 4;
 
 let paddleY = 150;
+
+let score = 0;
+
 const paddleHeight = 80;
 
-canvas.addEventListener("mousemove", function(e){
+canvas.addEventListener("mousemove", movePaddle);
+
+function movePaddle(e){
 const rect = canvas.getBoundingClientRect();
 paddleY = e.clientY - rect.top - paddleHeight/2;
-});
+}
 
 function draw(){
 
@@ -57,20 +64,24 @@ ctx.fillRect(10,paddleY,10,paddleHeight);
 ballX += ballDX;
 ballY += ballDY;
 
-/* rebond haut bas */
-if(ballY < 0 || ballY > canvas.height){
-ballDY = -ballDY;
+/* rebond */
+if(ballY<0 || ballY>canvas.height){
+ballDY=-ballDY;
 }
 
-/* rebond raquette */
-if(ballX < 20 && ballY > paddleY && ballY < paddleY+paddleHeight){
-ballDX = -ballDX;
+if(ballX<20 && ballY>paddleY && ballY<paddleY+paddleHeight){
+ballDX=-ballDX;
+score++;
 }
 
 /* mur droite */
-if(ballX > canvas.width){
-ballDX = -ballDX;
+if(ballX>canvas.width){
+ballDX=-ballDX;
 }
+
+/* score */
+ctx.font="20px Arial";
+ctx.fillText("Score: "+score,50,30);
 
 }
 
