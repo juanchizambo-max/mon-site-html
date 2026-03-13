@@ -35,3 +35,10 @@ if(x<0 || x>490) dx=-dx;
 if(y<0 || y>290) dy=-dy;
 }
 }
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+let x = 250;
+let y = 150;
+let dx = 3;
+let dy = 3;
