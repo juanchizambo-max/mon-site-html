@@ -29,13 +29,7 @@
 	  <h3>The Random number</h3>
 <button onclick="jouer()">Jouer</button>
 <p id="resultat"></p>
-<script>
-function jouer() {
-  let nombre = Math.floor(Math.random() * 10) + 1;
-  document.getElementById("resultat").textContent =
-  "Le nombre est : " + nombre;
-}
-</script>
+
 </section>
 
 <section id="multiplayer-games">
@@ -54,10 +48,18 @@ function toggleMenu(){
 document.querySelector(".nav-links").classList.toggle("active");
 }
 </script>
+		<script>
+function jouer() {
+  let nombre = Math.floor(Math.random() * 10) + 1;
+  document.getElementById("resultat").textContent =
+  "Le nombre est : " + nombre;
+}
+</script>
 
 
 </body>
 </html>
+
 
 
 
