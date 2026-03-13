@@ -81,7 +81,6 @@ pongGame = setInterval(draw,20);
 /* ------------------ */
 /* SNAKE GAME */
 /* ------------------ */
-
 let snakeGame;
 
 window.startSnake = function(){
@@ -89,31 +88,56 @@ window.startSnake = function(){
 const canvas = document.getElementById("snake");
 const ctx = canvas.getContext("2d");
 
+canvas.requestFullscreen(); // plein écran
+
 let snake = [{x:200,y:200}];
+
 let dx = 20;
 let dy = 0;
 
-document.addEventListener("keydown", function(e){
+let food = {
+x: Math.floor(Math.random()*20)*20,
+y: Math.floor(Math.random()*20)*20
+};
 
+document.addEventListener("keydown", changeDirection);
+
+function changeDirection(e){
 if(e.key === "ArrowUp"){dx=0;dy=-20;}
 if(e.key === "ArrowDown"){dx=0;dy=20;}
 if(e.key === "ArrowLeft"){dx=-20;dy=0;}
 if(e.key === "ArrowRight"){dx=20;dy=0;}
-
-});
+}
 
 function drawGame(){
 
 ctx.clearRect(0,0,400,400);
 
+/* mouvement serpent */
 snake.unshift({x:snake[0].x+dx,y:snake[0].y+dy});
-snake.pop();
 
+/* manger nourriture */
+if(snake[0].x === food.x && snake[0].y === food.y){
+
+food = {
+x: Math.floor(Math.random()*20)*20,
+y: Math.floor(Math.random()*20)*20
+};
+
+}else{
+snake.pop();
+}
+
+/* serpent */
 ctx.fillStyle="lime";
 
 snake.forEach(part=>{
 ctx.fillRect(part.x,part.y,20,20);
 });
+
+/* nourriture */
+ctx.fillStyle="red";
+ctx.fillRect(food.x,food.y,20,20);
 
 }
 
