@@ -44,5 +44,42 @@ if(y<0 || y>290) dy=-dy;
   function startSnake(){
 alert("Snake arrivera bientôt 🐍");
 }
+let snakeGame;
 
+function startSnake(){
+
+const canvas = document.getElementById("snake");
+const ctx = canvas.getContext("2d");
+
+let snake = [{x:200,y:200}];
+let dx = 20;
+let dy = 0;
+
+document.addEventListener("keydown", changeDirection);
+
+function changeDirection(e){
+if(e.key === "ArrowUp"){dx=0;dy=-20;}
+if(e.key === "ArrowDown"){dx=0;dy=20;}
+if(e.key === "ArrowLeft"){dx=-20;dy=0;}
+if(e.key === "ArrowRight"){dx=20;dy=0;}
+}
+
+function drawGame(){
+
+ctx.clearRect(0,0,400,400);
+
+snake.unshift({x:snake[0].x+dx,y:snake[0].y+dy});
+snake.pop();
+
+ctx.fillStyle="lime";
+
+snake.forEach(part=>{
+ctx.fillRect(part.x,part.y,20,20);
+});
+
+}
+
+snakeGame = setInterval(drawGame,100);
+
+}
 }
