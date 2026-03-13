@@ -1,1 +1,1 @@
-Test Server
+NiceGames
