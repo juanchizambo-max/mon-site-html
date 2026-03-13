@@ -13,10 +13,14 @@ box-shadow:0 4px 10px rgba(0,0,0,0.5);
 width:300px;
 }
 canvas{
-background:#3742fa;
-border:2px solid white;
+background:black;
 display:block;
 margin-top:10px;
+}
+
+canvas{
+background: #3742fa;
+border:2px solid white;
 }
 body{
 padding-top:70px;
