@@ -4,6 +4,26 @@ border:2px solid white;
 display:block;
 margin-top:10px;
 }
+body{
+padding-top:70px;
+font-family:Arial, sans-serif;
+background:#111;
+color:white;
+}
+button{
+padding:8px 14px;
+background:#3742fa;
+color:white;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+background:#2f36c7;
+}
+
+
 
 .important {
   color: red;
