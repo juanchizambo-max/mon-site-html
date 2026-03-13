@@ -16,15 +16,11 @@ width:500px;
 transform:scale(1.05);
 transition:0.3s;
 }
-canvas{
+#pongCanvas{
 background:black;
+border:2px solid white;
 display:block;
 margin-top:10px;
-}
-
-canvas{
-background: #3742fa;
-border:2px solid white;
 }
 body{
 padding-top:70px;
