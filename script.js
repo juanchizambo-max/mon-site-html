@@ -20,6 +20,7 @@ document.getElementById("resultat").textContent =
 /* ------------------ */
 
 let pongGame;
+  if(pongGame) return;
 
 window.startPong = function(){
 
@@ -93,6 +94,7 @@ pongGame = setInterval(draw,20);
 /* SNAKE GAME */
 /* ------------------ */
 let snakeGame;
+  if(snakeGame) return;
 
 window.startSnake = function(){
 
