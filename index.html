@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <title>NiceGames</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>NiceGames</title>
 </head>
-	<body>
-		
-<nav class="navbar">
-  <div class="logo">NiceGames</div>
 
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#singleplayer">Single Player</a></li>
-    <li><a href="#multiplayer-games">Multiplayer</a></li>
-    <li><a href="#io-games">.io games</a></li>
-  </ul>
-	<div class="hamburger" onclick="toggleMenu()">
-☰
-</div>
+<body>
+
+<nav class="navbar">
+<div class="logo">NiceGames</div>
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#singleplayer">Single Player</a></li>
+<li><a href="games.html">All Games</a></li>
+</ul>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
 </nav>
-		<section id="home">
+
+<section id="home">
 <h1>Welcome to NiceGames</h1>
 </section>
 
 <section id="singleplayer">
 <h2>Single Player</h2>
+
 <div class="game-grid">
 
 <div class="game-card">
@@ -33,31 +33,27 @@
 <button onclick="jouer()">Play</button>
 <p id="resultat"></p>
 </div>
+
 <div class="game-card">
 <h3>Pong</h3>
 <button onclick="startPong()">Play Pong</button>
 <canvas id="pongCanvas" width="600" height="400"></canvas>
 </div>
-	<div class="game-card">
+
+<div class="game-card">
 <h3>Snake</h3>
 <button onclick="startSnake()">Play Snake</button>
 <canvas id="snake" width="400" height="400"></canvas>
-	</div>
 </div>
 
-<section id="multiplayer-games">
-<h2>Multiplayer Games</h2>
+</div>
+
 </section>
 
-<section id="io-games">
-<h2>.io Games</h2>
-</section>
-	<p> By NX-Δ3 & NullByteJZ</p>
-	<script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
-
 
 
 
