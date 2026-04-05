@@ -1,3 +1,10 @@
+--bg: #0f172a;        /* fond principal (bleu très sombre) */
+--card: #1e293b;      /* cartes */
+--primary: #6366f1;   /* boutons (bleu violet) */
+--accent: #22c55e;    /* succès / snake */
+--danger: #ef4444;    /* erreurs / food */
+--text: #e2e8f0;      /* texte */
+
 .games-grid{
 display:grid;
 grid-template-columns:repeat(auto-fill,200px);
