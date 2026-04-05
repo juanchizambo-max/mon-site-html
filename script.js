@@ -165,7 +165,7 @@ ctx.fillRect(part.x,part.y,20,20);
 });
 
 /* nourriture */
-ctx.fillStyle="red";
+ctx.fillStyle="#ef4444";
 ctx.fillRect(food.x,food.y,20,20);
 
 /* score */
