@@ -85,15 +85,9 @@ h1{
 color: #3742fa;
 }
 .navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background: black;
-padding:15px 30px;
-position:fixed;
-top:0;
-width:100%;
-z-index:1000;
+  backdrop-filter: blur(10px);
+  background: rgba(15,23,42,0.7);
+  border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .logo{
