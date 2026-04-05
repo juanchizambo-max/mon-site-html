@@ -85,12 +85,23 @@ ctx.fillText("Score: "+score,50,30);
 
 }
 
-pongGame = setInterval(draw,20);
+pongGame = setInterval(draw,20)
 /* si la balle sort à gauche */
 if(ballX < 0){
 clearInterval(pongGame);
 alert("Game Over 🏓 Score: " + score);
 }
+  /* fond */
+ctx.fillStyle = "#020617";
+ctx.fillRect(0,0,canvas.width,canvas.height);
+
+/* ligne centrale */
+ctx.strokeStyle = "#334155";
+ctx.setLineDash([5,5]);
+ctx.beginPath();
+ctx.moveTo(canvas.width/2,0);
+ctx.lineTo(canvas.width/2,canvas.height);
+ctx.stroke();
 
 }
 
