@@ -159,7 +159,7 @@ snake.pop();
 }
 
 /* serpent */
-ctx.fillStyle="lime";
+ctx.fillStyle="#22c55e";
 snake.forEach(part=>{
 ctx.fillRect(part.x,part.y,20,20);
 });
