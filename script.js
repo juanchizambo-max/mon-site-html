@@ -168,7 +168,7 @@ ctx.fillText("Score: "+score,10,20);
 
 }
 
-snakeGame = setInterval(drawGame,100);
+snakeGame = setInterval(drawGame,250);
 
 }
 }
