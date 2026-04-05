@@ -21,6 +21,7 @@ let pongGame;
   if(pongGame) return;
 
 window.startPong = function(){
+  if(pongGame) return;
 
 const canvas = document.getElementById("pongCanvas");
 const ctx = canvas.getContext("2d");
@@ -85,6 +86,11 @@ ctx.fillText("Score: "+score,50,30);
 }
 
 pongGame = setInterval(draw,20);
+/* si la balle sort à gauche */
+if(ballX < 0){
+clearInterval(pongGame);
+alert("Game Over 🏓 Score: " + score);
+}
 
 }
 
@@ -95,6 +101,7 @@ let snakeGame;
   if(snakeGame) return;
 
 window.startSnake = function(){
+  if(snakeGame) return;
 
 const canvas = document.getElementById("snake");
 const ctx = canvas.getContext("2d");
@@ -169,6 +176,5 @@ ctx.fillText("Score: "+score,10,20);
 }
 
 snakeGame = setInterval(drawGame,250);
-
 }
 }
